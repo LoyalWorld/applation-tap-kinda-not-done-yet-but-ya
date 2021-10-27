@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* /* this imports a font from goodles API*/
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}  /*This is a style for the font basically*/  
+
+
+
+body {
+    background: linear-gradient(120deg, purple, blue);
+}/* This changes the background of the body/website and it also has a linear-gradient on it allowing it to flow into another color or even more then two colors depending on what you want  */
+
+.bubble1 {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, purple, blue);
+    clip-path: circle(10% at right 95%);
+ }/*This makes a circle/bubble */ 
+
+.bubble2 {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, purple, lightblue);
+    clip-path: circle(20% at right 15%);
+}  /*This makes a circle/bubble */ 
+
+.bubble3 {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, purple, lightblue);
+    clip-path: circle(15% at left 115%);
+}  /*This makes a circle/bubble */ 
+
+.bubble4 {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, purple, lightblue);
+    clip-path: circle(30% at left 15%);
+}  /*This makes a circle/bubble */ 
+
+.headingtext {
+    padding-left: 40%;
+    color: white;
+    text-shadow: 2.5px 2.5px 10px #333333;
+}  /* This is editing the text at the top of the website that says Application making the word more bold and changing the color and also changing where it is sitting in the website using padding in css*/
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1;
+} /* This sets the style of the card basically telling the code where it goes and kinda what I expect it to look like  */
+
+.container .card {
+  position: relative;
+  width: 25%;
+  height: 400%;
+  margin: 60px;
+  margin-left: 100px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(250, 250, 250, 0.1);
+  display: flex;
+  text-align: center;
+  justify-content: cent;
+  align-items: center;
+  border-top: 1px solid rgba(250, 250, 250, 0.5);
+  border-left: 1px solid rgba(250, 250, 250, 0.5);
+  backdrop-filter: blur(5px);
+} /* This is making the whole cards body changing everything like the blur color trans and everything else  */
+
+.container .card .content {
+  padding: 2%;
+  text-align: center;
+  transform: translateY(265px);
+  opacity: 0.2;
+  transition: 0.5s;
+} /* This changes where the lettering in the card is sitting allowing me to make it where the text only shows when the mouse is hovering over the card/container  */
+
+.container .card:hover .content {
+  transform: translateY(0);
+  opacity: 1;
+} /* this is the same thing I kinda explained above but this is what makes the hover animation work seeing that it does have :hover so it is allowing the transform to slowly and smoothly move it back into its rightful space  */
+
+.container .card .content h2 {
+  position: absolute;
+  top: -40px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(250, 250, 250, 0.2);
+} /* This code is changing the placement of the h2 text and making it to where you can hardly see it which is how I wanted it done.  */
+
+.container .card .content h3 {
+  font-size: 1.8em; 
+  color: #fff;
+  z-index: 1;
+} /* This is changing the index, Fontsize and color as you can see simply shown above in the code.  */
+
+.container .card .content p {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+} /* This is another thing inside the container card, This is basically changing the color of the text changing also the font size and the font weight once again that is shown above in the code.  */
+
+
+.container .card .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+} /* This is where I added the <a href=""><a> and now im making it a button with a bored and shadow behind it and changing a few other things in this code like its placement, color, size etc.  */
+
+#apply {
+  color: #FF0000;
+  text-decoration-line: line-through;
+} /* I used a ID code for this one mainly because everything else is in a class and I already hade this text in a class so this is bassially just putting a red line through the word "Apply" and making the "Apply" word red so that people know we dont need anymore people on our web development team.  */
